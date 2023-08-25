@@ -2,6 +2,7 @@
 
 pipeline{
   agent any
+  
   stages{
     stage('demo'){
       steps{
@@ -11,6 +12,12 @@ pipeline{
     stage('build'){
       steps{
         build("dev")
+      }
+    }
+    stages{
+    stage('sonar scan'){
+      steps{
+        sonarScan("dev")
       }
     }
   }
