@@ -1,3 +1,3 @@
-def call(){
-  echo "hey user this is build stage!"
+def call(env){
+  echo "hey user, this is ${env} build stage!"
 }
