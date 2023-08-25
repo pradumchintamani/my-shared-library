@@ -14,7 +14,6 @@ pipeline{
         build("dev")
       }
     }
-    stages{
     stage('sonar scan'){
       steps{
         sonarScan("dev")
