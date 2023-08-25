@@ -8,5 +8,10 @@ pipeline{
         helloUser("Pradum")
       }
     }
+    stage('build'){
+      steps{
+        build()
+      }
+    }
   }
 }
