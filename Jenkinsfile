@@ -19,5 +19,20 @@ pipeline{
         sonarScan("dev")
       }
     }
+    stage('docker build'){
+      steps{
+        dockerBuild("dev")
+      }
+    }
+    stage('pushImage'){
+      steps{
+        pushImage("dev")
+      }
+    }
+    stage('Deploy'){
+      steps{
+        deploy("dev")
+      }
+    }
   }
 }
